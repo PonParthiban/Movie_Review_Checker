@@ -1,0 +1,13 @@
+# Virtual environments
+venv/
+ENV/
+env/
+
+# Data files (large)
+data/*.csv
+*.csv
+
+# Plots/outputs
+*.png
+*.jpg
+*.jpeg
