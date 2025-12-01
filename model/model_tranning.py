@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
+from sklearn.metrics import confusion_matrix, accuracy_score
 import seaborn as sns
 import pickle
 
@@ -42,8 +42,6 @@ model.fit(X_train_vectorized, y_train)
 y_pred = model.predict(X_test_vectorized)
 
 print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
-print("\nClassification Report:")
-print(classification_report(y_test, y_pred, target_names=['Negative', 'Positive']))
 
 # Confusion matrix
 cm = confusion_matrix(y_test, y_pred)
